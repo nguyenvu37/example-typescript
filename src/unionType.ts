@@ -1,9 +1,7 @@
 export {};
-// type Alias
+// union type
 
-type MixDate = Date | string | number;
-
-function isWeekend(date: MixDate): boolean {
+function isWeekend(date: Date | string | number): boolean {
   if (
     typeof date === 'string' ||
     typeof date === 'number'
@@ -17,7 +15,3 @@ function isWeekend(date: MixDate): boolean {
 console.log(isWeekend(new Date()));
 console.log(isWeekend('2021-12-11'));
 console.log(isWeekend(new Date().getTime()));
-
-function isLastDayOfMonth(date: MixDate) {
-  return false;
-}
